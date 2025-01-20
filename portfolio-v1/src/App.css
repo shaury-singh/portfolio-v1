@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(0, 0, 0);
+}
+/* Displays */
+.primary-flex{
+  display: flex;
+}
+/* Alignments and Justifications */
+.justify-center{
+  justify-content: center;
+}
+/* Widths */
+.width-content{
+  width: max-content;
+}
+.width-40{
+  width: 40%;
+}
+.width-60{
+  width: 60%;
+}
+.width-30{
+  width: 30%;
+}
+.width-70{
+  width: 70%;
+}
+/* Heights */
+.height-sml{
+  height: 15px;
+}
+.height-content{
+  height: max-content;
+}
+/* Paddings  */
+.padding-sml{
+  padding: 10px;
+}
+/* Margins */
+.margin-t-sml{
+  margin-top: 10px;
+}
+.spacing-r-sml{
+  margin: 0px 10px;
+}
+/* Backgrounds */
+.bg-secondary-theme{
+  background-color: rgb(58, 58, 58);
+}
+/* Floats */
+.float-left{
+  float: left;
+}
+/* Colors */
+.whiten{
+  color: white;
+}
+/* Externals  */
+.border-10{
+  border-radius: 10px;
+}
