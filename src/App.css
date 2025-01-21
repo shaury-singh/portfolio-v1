@@ -157,3 +157,30 @@ body{
 .transform-left{
   transform: translateX(10px);
 }
+@media screen and (max-width: 1024px) {
+  .left-info{
+    width: 100%;
+    justify-content: center;
+  }
+  .right-info{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .font-head{
+    font-size: 72px;
+  }
+  .text-info{
+    text-align: start;
+  }
+}
+@media screen and (max-width: 425px) {
+  .font-head{
+    font-size: 35px;
+  }
+  .text-info {
+    max-width: 425px;
+  }  
+}
