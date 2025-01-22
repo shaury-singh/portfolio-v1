@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from "../Images/shaury.jpeg";
-
+import AartiPage from "../Images/AartiPage.png";
 export default function Image() {
   return (
     <div>
@@ -17,6 +17,26 @@ export default function Image() {
           <h1 className='font-poppins font-head font-spacing primary-flex justify-start margin-left-extra transform-up darken'>ENGINEER</h1>
           <div className='primary-flex margin-left-extra'>
             <p className='third-font text-center width-500 font-poppins transform-up-max text-info'>Passionate about creating simple solution to complex problems combined with great user experience. Specialize in transforming ideas into beautifully crafted products.</p>
+          </div>
+        </div>
+        <div className='primary-grid justify-center margin-left'>
+          <div>
+            <h1 className='font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start'>Recent</h1>
+            <h1 className='font-poppins font-head font-spacing primary-flex justify-start transform-up darken'>Projects</h1>
+          </div>
+          <div className='width-content'>
+            <div className='width-content border-10 cursor-pointer primary-flex padding-sml size-project'>
+              <div className='float-left width-25'>
+                <img src={AartiPage} alt='' className='link-img'></img>
+              </div>
+              <div className='float-left width-65 primary-flex flex-col justify-center'>
+                <h3 className='whiten font-poppins spacing-l-sml'>Maha Ganga Aarti Events</h3>
+                <h6 className='whiten font-poppins spacing-l-sml'>Event Booking Website</h6>
+              </div>
+              <div className='float-left width-10 primary-flex flex-col whiten'>
+                <ion-icon name="log-out-outline"></ion-icon>
+              </div>
+            </div>
           </div>
         </div>
       </div>
