@@ -4,8 +4,21 @@
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff00;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff00;
+}
 body{
   background-color: rgb(0, 0, 0);
+  overflow: hidden;
 }
 /* Displays */
 .primary-flex{
@@ -106,6 +119,9 @@ body{
 .margin-bottom{
   margin-bottom: 25px;
 }
+.margin-bottom-extra{
+  margin-bottom: 50px;
+}
 /* Backgrounds */
 .bg-secondary-theme{
   background-color: rgb(58, 58, 58);
@@ -179,12 +195,20 @@ body{
   height: 100px;
   border-radius: 10px;
 }
+.right-info{
+  overflow-y: scroll;
+  transform: translateY(5%);
+  height: 100vh;
+}
 /* Actives */
 .size-project:hover{
   background-color: rgb(58, 58, 58);
   transition: 0.8s;
 }
 @media screen and (max-width: 1024px) {
+  body{
+    overflow: scroll;
+  }
   .margin-left-extra{
     margin-left: 0px;
   }

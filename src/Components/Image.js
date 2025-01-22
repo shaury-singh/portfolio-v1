@@ -22,7 +22,7 @@ export default function Image() {
           <p className='text-center margin-t-sml font-poppins darken-mix'><b>A engineer who is capable of developing innovative solutions to knotty problems.</b></p>
         </div>
       </div>
-      <div className='right-info float-left width-60 '>
+      <div className='right-info float-left width-60'>
         <div className='primary-grid justify-center pos-rel info-div'>
           <h1 className='font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start margin-left-extra'>SOFTWARE</h1>
           <h1 className='font-poppins font-head font-spacing primary-flex justify-start margin-left-extra transform-up darken'>ENGINEER</h1>
@@ -46,7 +46,7 @@ export default function Image() {
               <Tools img={Figma} projectName="Figma" desc="Web Design Usage"></Tools>
               <Tools img={MySQL} projectName="MySQL" desc="SQL Based Database"></Tools>
             </div>
-            <div className='primary-flex'>
+            <div className='primary-flex margin-bottom-extra'>
               <Tools img={MongoDB} projectName="MongoDB" desc="NoSQL Based Database"></Tools>
               <Tools img={Aws} projectName="AWS Hosting" desc="Devops"></Tools>
             </div>
