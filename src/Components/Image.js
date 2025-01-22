@@ -12,7 +12,7 @@ export default function Image() {
         </div>
       </div>
       <div className='right-info float-left width-60'>
-        <div className='primary-grid justify-center pos-rel'>
+        <div className='primary-grid justify-center pos-rel info-div'>
           <h1 className='font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start margin-left-extra'>SOFTWARE</h1>
           <h1 className='font-poppins font-head font-spacing primary-flex justify-start margin-left-extra transform-up darken'>ENGINEER</h1>
           <div className='primary-flex margin-left-extra'>

@@ -158,6 +158,9 @@ body{
   transform: translateX(10px);
 }
 @media screen and (max-width: 1024px) {
+  .margin-left-extra{
+    margin-left: 0px;
+  }
   .left-info{
     width: 100%;
     justify-content: center;
@@ -169,18 +172,34 @@ body{
   }
 }
 @media screen and (max-width: 768px) {
+  .info-div{
+    justify-content: center;
+  }
+  .margin-left-extra{
+    margin-left: 0px;
+  }
   .font-head{
-    font-size: 72px;
+    font-size: 72px; 
+    justify-content: center;
   }
   .text-info{
-    text-align: start;
+    text-align: center;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
+  .info-div{
+    justify-content: center;
+  }
+  .margin-left-extra{
+    margin-left: 0px;
+  }
   .font-head{
-    font-size: 35px;
+    font-size: 65px;
+    justify-content: center;
   }
   .text-info {
     max-width: 425px;
+    justify-content: center;
+    text-align: center;
   }  
 }
