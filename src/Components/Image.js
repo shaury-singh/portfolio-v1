@@ -1,6 +1,17 @@
 import React from 'react'
 import logo from "../Images/shaury.jpeg";
 import AartiPage from "../Images/AartiPage.png";
+import Investify from "../Images/Investify.png"
+import RecentProjects from './RecentProjects';
+import Projects from './Projects';
+import ReactJS from "../Images/React JS.png";
+import Tools from './Tools';
+import NodeJS from "../Images/nodeJS.png";
+import Figma from "../Images/Figma.png";
+import MySQL from "../Images/MySQL.png";
+import MongoDB from "../Images/MongoDB.png";
+import Aws from "../Images/aws.png";
+
 export default function Image() {
   return (
     <div>
@@ -11,7 +22,7 @@ export default function Image() {
           <p className='text-center margin-t-sml font-poppins darken-mix'><b>A engineer who is capable of developing innovative solutions to knotty problems.</b></p>
         </div>
       </div>
-      <div className='right-info float-left width-60'>
+      <div className='right-info float-left width-60 '>
         <div className='primary-grid justify-center pos-rel info-div'>
           <h1 className='font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start margin-left-extra'>SOFTWARE</h1>
           <h1 className='font-poppins font-head font-spacing primary-flex justify-start margin-left-extra transform-up darken'>ENGINEER</h1>
@@ -20,22 +31,24 @@ export default function Image() {
           </div>
         </div>
         <div className='primary-grid justify-center margin-left'>
-          <div>
-            <h1 className='font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start'>Recent</h1>
-            <h1 className='font-poppins font-head font-spacing primary-flex justify-start transform-up darken'>Projects</h1>
-          </div>
-          <div className='width-content'>
-            <div className='width-content border-10 cursor-pointer primary-flex padding-sml size-project'>
-              <div className='float-left width-25'>
-                <img src={AartiPage} alt='' className='link-img'></img>
-              </div>
-              <div className='float-left width-65 primary-flex flex-col justify-center'>
-                <h3 className='whiten font-poppins spacing-l-sml'>Maha Ganga Aarti Events</h3>
-                <h6 className='whiten font-poppins spacing-l-sml'>Event Booking Website</h6>
-              </div>
-              <div className='float-left width-10 primary-flex flex-col whiten'>
-                <ion-icon name="log-out-outline"></ion-icon>
-              </div>
+          <RecentProjects head1="Recent" head2="Projects"></RecentProjects>
+          <Projects img={AartiPage} projectName="Maha Ganga Aarti Events" desc="Event Booking Website"></Projects>
+          <Projects img={Investify} projectName="Investify Stock Exchange" desc="Self Contained Stock Exchange"></Projects>
+        </div>
+        <div className='primary-grid justify-center margin-left'>
+          <RecentProjects head1="Premuim" head2="Tools"></RecentProjects>
+          <div className='primary-grid padding-sml'>
+            <div className='primary-flex'>
+              <Tools img={ReactJS} projectName="React.JS" desc="Frontend Library"></Tools>
+              <Tools img={NodeJS} projectName="Node.JS" desc="Backend Framework"></Tools>
+            </div>
+            <div className='primary-flex'>
+              <Tools img={Figma} projectName="Figma" desc="Web Design Usage"></Tools>
+              <Tools img={MySQL} projectName="MySQL" desc="SQL Based Database"></Tools>
+            </div>
+            <div className='primary-flex'>
+              <Tools img={MongoDB} projectName="MongoDB" desc="NoSQL Based Database"></Tools>
+              <Tools img={Aws} projectName="AWS Hosting" desc="Devops"></Tools>
             </div>
           </div>
         </div>

@@ -94,11 +94,17 @@ body{
 .margin-left-extra{
   margin-left: 90px;
 }
+.margin-right{
+  margin-right: 20px;
+}
 .spacing-l-sml{
   margin-left: 10px;
 }
 .spacing-r-sml{
   margin: 0px 10px;
+}
+.margin-bottom{
+  margin-bottom: 25px;
 }
 /* Backgrounds */
 .bg-secondary-theme{
