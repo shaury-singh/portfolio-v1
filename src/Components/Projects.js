@@ -8,8 +8,9 @@ export default function Projects(props) {
             <img src={props.img} alt='' className='link-img'></img>
           </div>
           <div className='float-left width-65 primary-flex flex-col justify-center'>
-            <h3 className='whiten font-poppins spacing-l-sml'>{props.projectName}</h3>
+            <a href={props.pointer}><h3 className='whiten font-poppins spacing-l-sml'>{props.projectName}</h3></a>
             <h6 className='whiten font-poppins spacing-l-sml'>{props.desc}</h6>
+            <h6 className='whiten font-poppins spacing-l-sml'>{props.desc2}</h6>
           </div>
           <div className='float-left width-10 primary-flex flex-col whiten'>
             <ion-icon name="log-out-outline"></ion-icon>
