@@ -31,6 +31,9 @@ body{
   display: grid;
 }
 /* Alignments and Justifications */
+.align-center{
+  align-items: center;
+}
 .text-center{
   text-align: center;
 }
@@ -53,6 +56,9 @@ body{
 .width-min{
   width: min-content;
 }
+.width-30{
+  width: 30%;
+}
 .width-40{
   width: 40%;
 }
@@ -61,9 +67,6 @@ body{
 }
 .width-60{
   width: 60%;
-}
-.width-30{
-  width: 30%;
 }
 .width-70{
   width: 70%;
@@ -194,6 +197,10 @@ body{
 .link-img{
   height: 100px;
   border-radius: 10px;
+}
+.testimonials-img{
+  height: 100px;
+  width: 100px;
 }
 .right-info{
   overflow-y: scroll;

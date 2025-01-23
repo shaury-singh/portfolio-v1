@@ -4,7 +4,7 @@ export default function Projects(props) {
   return (
     <div className='width-content margin-bottom'>
         <div className='width-content border-10 cursor-pointer primary-flex padding-sml size-project'>
-          <div className='float-left width-25'>
+          <div className='float-left'>
             <img src={props.img} alt='' className='link-img'></img>
           </div>
           <div className='float-left width-65 primary-flex flex-col justify-center'>
