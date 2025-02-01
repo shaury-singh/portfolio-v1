@@ -16,16 +16,16 @@ import { motion, useInView } from "framer-motion";
 
 export default function Image() {
   const refProjects = useRef(null);
-  const isProjectsInView = useInView(refProjects, { once: true });
+  const isProjectsInView = useInView(refProjects, { once: true, amount: 0.5 });
   const refTools = useRef(null);
-  const isToolsInView = useInView(refTools, { once: true });
+  const isToolsInView = useInView(refTools, { once: true, amount: 0.5 });
   return (
     <div>
       <div className="left-info float-left width-40 primary-grid justify-end">
         <Leftinfo logo={logo} name="Shaury Singh" desc="An engineer who is capable of developing innovative solutions to knotty problems."/>
       </div>
       <div className="right-info float-left width-60">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} viewport={{ once: true }} className="primary-grid justify-center pos-rel info-div">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center pos-rel info-div">
           <h1 className="font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start margin-left-extra">SOFTWARE</h1>
           <h1 className="font-poppins font-head font-spacing primary-flex justify-start margin-left-extra transform-up darken">ENGINEER</h1>
           <div className="primary-flex margin-left-extra">
@@ -35,12 +35,22 @@ export default function Image() {
             </p>
           </div>
         </motion.div>
-        <motion.div ref={refProjects} initial={{ opacity: 0 }} animate={{ opacity: isProjectsInView ? 1 : 0 }} transition={{ duration: 3 }} viewport={{ once: true }} className="primary-grid justify-center margin-left">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-flex justify-center margin-top margin-bottom">
+          <div className="whiten margin-right font-roboto float-left width-50 primary-grid justify-end">
+            <h1 className="primary-flex justify-center font-head">200+</h1>
+            <p className="darken primary-flex justify-center font-main">Github Contributions</p>
+          </div>
+          <div className="whiten margin-right font-roboto float-left width-50">
+            <h1 className="primary-flex justify-center font-head">100+</h1>
+            <p className="darken primary-flex justify-center font-main">Leetcode Questions</p>
+          </div>
+        </motion.div>
+        <motion.div ref={refProjects} initial={{ opacity: 0 }} animate={{ opacity: isProjectsInView ? 1 : 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center margin-left">
           <RecentProjects head1="Recent" head2="Projects" />
           <Projects pointer="https://gangaaartievents.com/" img={AartiPage} projectName="Maha Ganga Aarti Events" desc="Event Booking Website (Client Work)"/>
           <Projects pointer="https://github.com/shaury-singh/investify-v2" img={Investify} projectName="Investify Stock Exchange" desc="Self Contained Stock Exchange (Concept Work)"/>
         </motion.div>
-        <motion.div ref={refTools} initial={{ opacity: 0 }} animate={{ opacity: isToolsInView ? 1 : 0 }} transition={{ duration: 3 }} viewport={{ once: true }} className="primary-grid justify-center margin-left">
+        <motion.div ref={refTools} initial={{ opacity: 0 }} animate={{ opacity: isToolsInView ? 1 : 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center margin-left">
           <RecentProjects head1="Premium" head2="Tools"/>
           <div className="primary-grid padding-sml">
             <div className="primary-flex">
