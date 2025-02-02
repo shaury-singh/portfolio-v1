@@ -216,6 +216,7 @@ body{
   height: 100vh;
 }
 .left-info{
+  transform: translateY(10%);
   position: fixed;
   top: 0;
 }
@@ -229,10 +230,12 @@ body{
     margin-left: 0px;
   }
   .left-info{
+    position: relative;
     width: 100%;
     justify-content: center;
   }
   .right-info{
+    margin-left: 0%;
     width: 100%;
     display: grid;
     justify-content: center;

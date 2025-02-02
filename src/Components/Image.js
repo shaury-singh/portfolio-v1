@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../Images/shaury.jpeg";
 import AartiPage from "../Images/AartiPage.png";
 import Investify from "../Images/Investify.png";
@@ -15,6 +15,26 @@ import Leftinfo from "./Leftinfo";
 import { motion, useInView } from "framer-motion";
 
 export default function Image() {
+  const [contr, setContr] = useState(0);
+  const [ques, setQues] = useState(0);
+  useEffect(() => {
+    const contrInterval = setInterval(() => {
+      setContr((prev) => (prev < 200 ? prev + 1 : prev));
+    },2); 
+    setTimeout(() => {
+      clearInterval(contrInterval);
+    }, 1000); 
+    const quesInterval = setInterval(() => {
+      setQues((prev) => (prev < 100 ? prev + 1 : prev));
+    }, 5);
+    setTimeout(() => {
+      clearInterval(quesInterval);
+    }, 1000);
+    return () => {
+      clearInterval(contrInterval);
+      clearInterval(quesInterval);
+    };
+  }, []);
   const refProjects = useRef(null);
   const isProjectsInView = useInView(refProjects, { once: true, amount: 0.5 });
   const refTools = useRef(null);
@@ -22,7 +42,7 @@ export default function Image() {
   return (
     <div>
       <div className="left-info float-left width-40 primary-grid justify-end">
-        <Leftinfo logo={logo} name="Shaury Singh" desc="An engineer who is capable of developing innovative solutions to knotty problems."/>
+        <Leftinfo logo={logo} name="Shaury Singh" desc="An engineer who is capable of figuring out solutions to complex problems."/>
       </div>
       <div className="right-info">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center pos-rel info-div">
@@ -37,11 +57,11 @@ export default function Image() {
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-flex justify-center margin-top margin-bottom">
           <div className="whiten margin-right font-roboto float-left width-50 primary-grid justify-end">
-            <h1 className="primary-flex justify-center font-head">200+</h1>
+            <h1 className="primary-flex justify-center font-head">{contr}+</h1>
             <p className="darken primary-flex justify-center font-main">Github Contributions</p>
           </div>
           <div className="whiten margin-right font-roboto float-left width-50">
-            <h1 className="primary-flex justify-center font-head">100+</h1>
+            <h1 className="primary-flex justify-center font-head">{ques}+</h1>
             <p className="darken primary-flex justify-center font-main">Leetcode Questions</p>
           </div>
         </motion.div>
