@@ -24,7 +24,7 @@ export default function Image() {
       <div className="left-info float-left width-40 primary-grid justify-end">
         <Leftinfo logo={logo} name="Shaury Singh" desc="An engineer who is capable of developing innovative solutions to knotty problems."/>
       </div>
-      <div className="right-info float-left width-60">
+      <div className="right-info">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center pos-rel info-div">
           <h1 className="font-poppins whiten font-head font-spacing margin-top-extra primary-flex justify-start margin-left-extra">SOFTWARE</h1>
           <h1 className="font-poppins font-head font-spacing primary-flex justify-start margin-left-extra transform-up darken">ENGINEER</h1>
@@ -61,7 +61,7 @@ export default function Image() {
               <Tools pointer="https://www.figma.com/" img={Figma} projectName="Figma" desc="Web Design Usage" />
               <Tools pointer="https://www.mysql.com/" img={MySQL} projectName="MySQL" desc="SQL Based Database" />
             </div>
-            <div className="primary-flex margin-bottom-extra">
+            <div className="primary-flex">
               <Tools pointer="https://www.mongodb.com/" img={MongoDB} projectName="MongoDB" desc="NoSQL Based Database" />
               <Tools pointer="https://aws.amazon.com/" img={Aws} projectName="AWS Hosting" desc="DevOps" />
             </div>
