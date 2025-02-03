@@ -256,7 +256,26 @@ body{
     text-align: center;
   }
 }
+@media screen and (max-width: 625px) {
+  .link-img{
+    height: 50px;
+  }
+  .font-head{
+    font-size: 50px;
+  }
+}
 @media screen and (max-width: 426px) {
+  .tools-div-only{
+    padding: 0;
+  }
+  .project-div{
+    margin: 0;
+  }
+  .icon-space{
+    width: 0;
+    height: 0;
+    display: none;
+  }
   .info-div{
     justify-content: center;
   }
@@ -264,12 +283,30 @@ body{
     margin-left: 0px;
   }
   .font-head{
-    font-size: 65px;
+    font-size: 56px;
     justify-content: center;
+  }
+  .font-main{
+    font-size: 20px;
   }
   .text-info {
     max-width: 425px;
     justify-content: center;
     text-align: center;
   }  
+}
+@media screen and (max-width: 376px) {
+  .img-div{
+    display: flex;
+    align-items: center;
+  }
+  .link-img{
+    height: 30px;
+  }
+  .text-info{
+    width: 375px;
+  }
+  .div-width{
+    width: 375px;
+  }
 }

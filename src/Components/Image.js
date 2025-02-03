@@ -19,14 +19,14 @@ export default function Image() {
   const [ques, setQues] = useState(0);
   useEffect(() => {
     const contrInterval = setInterval(() => {
-      setContr((prev) => (prev < 200 ? prev + 1 : prev));
-    },2); 
+      setContr((prev) => (prev < 200 ? prev + 5 : prev));
+    },10); 
     setTimeout(() => {
       clearInterval(contrInterval);
     }, 1000); 
     const quesInterval = setInterval(() => {
-      setQues((prev) => (prev < 100 ? prev + 1 : prev));
-    }, 5);
+      setQues((prev) => (prev < 100 ? prev + 5 : prev));
+    },10);
     setTimeout(() => {
       clearInterval(quesInterval);
     }, 1000);
@@ -56,23 +56,23 @@ export default function Image() {
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-flex justify-center margin-top margin-bottom">
-          <div className="whiten margin-right font-roboto float-left width-50 primary-grid justify-end">
+          <div className="project-div whiten margin-right font-roboto float-left width-50 primary-grid justify-end">
             <h1 className="primary-flex justify-center font-head">{contr}+</h1>
             <p className="darken primary-flex justify-center font-main">Github Contributions</p>
           </div>
-          <div className="whiten margin-right font-roboto float-left width-50">
+          <div className="project-div whiten margin-right font-roboto float-left width-50">
             <h1 className="primary-flex justify-center font-head">{ques}+</h1>
             <p className="darken primary-flex justify-center font-main">Leetcode Questions</p>
           </div>
         </motion.div>
-        <motion.div ref={refProjects} initial={{ opacity: 0 }} animate={{ opacity: isProjectsInView ? 1 : 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center margin-left">
+        <motion.div ref={refProjects} initial={{ opacity: 0 }} animate={{ opacity: isProjectsInView ? 1 : 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="project-div primary-grid justify-center margin-left">
           <RecentProjects head1="Recent" head2="Projects" />
           <Projects pointer="https://gangaaartievents.com/" img={AartiPage} projectName="Maha Ganga Aarti Events" desc="Event Booking Website (Client Work)"/>
           <Projects pointer="https://github.com/shaury-singh/investify-v2" img={Investify} projectName="Investify Stock Exchange" desc="Self Contained Stock Exchange (Concept Work)"/>
         </motion.div>
-        <motion.div ref={refTools} initial={{ opacity: 0 }} animate={{ opacity: isToolsInView ? 1 : 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="primary-grid justify-center margin-left">
+        <motion.div ref={refTools} initial={{ opacity: 0 }} animate={{ opacity: isToolsInView ? 1 : 0 }} transition={{ duration: 1 }} viewport={{ once: true, amount: 0.5 }} className="project-div primary-grid justify-center margin-left">
           <RecentProjects head1="Premium" head2="Tools"/>
-          <div className="primary-grid padding-sml">
+          <div className="tools-div-only primary-grid padding-sml">
             <div className="primary-flex">
               <Tools pointer="https://react.dev/" img={ReactJS} projectName="React.JS" desc="Frontend Library" />
               <Tools pointer="https://nodejs.org/en" img={NodeJS} projectName="Node.JS" desc="Backend Framework" />
